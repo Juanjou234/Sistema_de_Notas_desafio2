@@ -11,6 +11,7 @@ public class Main extends JFrame {
     private JButton btnMateria;
     private JButton btnNota;
     private JButton btnSalir;
+    private JButton btnVerNotas;
 
     public Main(){
         this.setTitle("Main");
@@ -46,6 +47,14 @@ public class Main extends JFrame {
         btnSalir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+        btnVerNotas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frameCuadroDeNotas = new VerNotas();
+                frameCuadroDeNotas.setVisible(true);
                 dispose();
             }
         });
